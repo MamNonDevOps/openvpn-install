@@ -45,8 +45,9 @@ The client configuration is available in: /root/az-tech.ovpn
 
 ### Download configuration file
 
-Open TCP port 8000 on firewall or security groups
-
+Open port on firewall or security groups
+- TCP  8000
+- UDP  1194
 
 Run command
 ```
