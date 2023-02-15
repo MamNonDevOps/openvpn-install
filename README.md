@@ -6,14 +6,17 @@ bash openvpn-ubuntu-install.sh
 ```
 
 Public IPv4 address / hostname:
+
 => Enter `public ip of instances`
 
 Which protocol should OpenVPN use?
    1) UDP (recommended)
    2) TCP
+   3) 
 => UDP is faster
 
 What port should OpenVPN listen to?
+
 => default port 1194
 
 
@@ -24,9 +27,11 @@ Select a DNS server for the clients:
    4) OpenDNS
    5) Quad9
    6) AdGuard
+
 => whatever! chọn gì cũng đc
 
 Enter a name for the first client:
+
 => az-tech
 
 The client configuration is available in: /root/az-tech.ovpn
