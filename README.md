@@ -1,3 +1,5 @@
+### Installation
+
 ```
 sudo apt update -y
 wget https://git.io/vpn -O openvpn-ubuntu-install.sh
