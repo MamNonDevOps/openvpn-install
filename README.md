@@ -1,20 +1,45 @@
-**New: [wireguard-install](https://github.com/Nyr/wireguard-install) is also available.**
+```
+sudo apt update -y
+wget https://git.io/vpn -O openvpn-ubuntu-install.sh
+chmod -v +x openvpn-ubuntu-install.sh
+bash openvpn-ubuntu-install.sh
+```
 
-## openvpn-install
-OpenVPN [road warrior](http://en.wikipedia.org/wiki/Road_warrior_%28computing%29) installer for Ubuntu, Debian, AlmaLinux, Rocky Linux, CentOS and Fedora.
+Public IPv4 address / hostname:
+=> Enter `public ip of instances`
 
-This script will let you set up your own VPN server in no more than a minute, even if you haven't used OpenVPN before. It has been designed to be as unobtrusive and universal as possible.
+Which protocol should OpenVPN use?
+   1) UDP (recommended)
+   2) TCP
+=> UDP is faster
 
-### Installation
-Run the script and follow the assistant:
+What port should OpenVPN listen to?
+=> default port 1194
 
-`wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh`
 
-Once it ends, you can run it again to add more users, remove some of them or even completely uninstall OpenVPN.
+Select a DNS server for the clients:
+   1) Current system resolvers
+   2) Google
+   3) 1.1.1.1
+   4) OpenDNS
+   5) Quad9
+   6) AdGuard
+=> whatever! chọn gì cũng đc
 
-### I want to run my own VPN but don't have a server for that
-You can get a VPS from just 2€/month at [AlphaVPS](https://alphavps.com/clients/aff.php?aff=474&pid=422).
+Enter a name for the first client:
+=> az-tech
 
-### Donations
+The client configuration is available in: /root/az-tech.ovpn
 
-If you want to show your appreciation, you can donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBAYDL34Z7J6L) or [cryptocurrency](https://pastebin.com/raw/M2JJpQpC). Thanks!
+### Download configuration file
+
+Open TCP port 8000 on firewall or security groups
+
+Run command
+```
+cd /root && python3 -m http.server
+```
+
+Open web browser, access url: `public ip of instances`:8000
+
+Click to download file
