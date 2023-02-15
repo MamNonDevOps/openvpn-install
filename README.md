@@ -9,11 +9,13 @@ Public IPv4 address / hostname:
 
 => Enter `public ip of instances`
 
+
 Which protocol should OpenVPN use?
    1) UDP (recommended)
    2) TCP
-   3) 
+
 => UDP is faster
+
 
 What port should OpenVPN listen to?
 
@@ -30,21 +32,27 @@ Select a DNS server for the clients:
 
 => whatever! chọn gì cũng đc
 
+
 Enter a name for the first client:
 
 => az-tech
 
+
 The client configuration is available in: /root/az-tech.ovpn
+
 
 ### Download configuration file
 
 Open TCP port 8000 on firewall or security groups
+
 
 Run command
 ```
 cd /root && python3 -m http.server
 ```
 
+
 Open web browser, access url: `public ip of instances`:8000
+
 
 Click to download file
