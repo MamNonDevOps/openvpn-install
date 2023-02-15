@@ -43,6 +43,12 @@ Enter a name for the first client:
 The client configuration is available in: /root/az-tech.ovpn
 
 
+Check status of openvpn server
+```
+systemctl status openvpn-server@server.service
+```
+
+
 ### Download configuration file
 
 Open port on firewall or security groups
